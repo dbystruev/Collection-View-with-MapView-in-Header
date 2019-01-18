@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aB0-BC-fhN">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Doodle Fun-->
+        <scene sceneID="DsR-WI-rDd">
+            <objects>
+                <viewController id="QHd-af-WWX" customClass="DoodleViewController" customModule="Adaptive_Collection_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="On1-ZG-2U2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="u2o-Dn-5kO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <color key="backgroundColor" red="1" green="0.81903627560000003" blue="0.1288025662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n6g-Tg-Faw">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="200"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="6sy-c0-Wxh" customClass="DoodleCollectionViewCell" customModule="Adaptive_Collection_Views" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="210" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hbi-fu-Spj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Hbi-fu-Spj" firstAttribute="leading" secondItem="6sy-c0-Wxh" secondAttribute="leading" id="B0w-rZ-GQf"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hbi-fu-Spj" secondAttribute="bottom" id="NrT-Pl-6eb"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hbi-fu-Spj" secondAttribute="trailing" id="S7z-Lj-0Yy"/>
+                                            <constraint firstItem="Hbi-fu-Spj" firstAttribute="top" secondItem="6sy-c0-Wxh" secondAttribute="top" id="VR6-3x-R9h"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="Hbi-fu-Spj" id="66W-BK-t95"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Header" id="XWk-Yd-TH1" customClass="DoodleCollectionViewHeader" customModule="Adaptive_Collection_Views" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qu5-wY-bA0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        </mapView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Qu5-wY-bA0" secondAttribute="trailing" id="9Z4-i8-zfo"/>
+                                        <constraint firstItem="Qu5-wY-bA0" firstAttribute="leading" secondItem="XWk-Yd-TH1" secondAttribute="leading" id="Z8J-OV-etK"/>
+                                        <constraint firstAttribute="bottom" secondItem="Qu5-wY-bA0" secondAttribute="bottom" id="aKh-mE-24m"/>
+                                        <constraint firstItem="Qu5-wY-bA0" firstAttribute="top" secondItem="XWk-Yd-TH1" secondAttribute="top" id="g2l-au-R3A"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="mapView" destination="Qu5-wY-bA0" id="L9i-wJ-K1I"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="QHd-af-WWX" id="5TO-mL-rC6"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.87450980392156863" green="0.72549019607843135" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="u2o-Dn-5kO" firstAttribute="top" secondItem="On1-ZG-2U2" secondAttribute="top" id="HIS-Bz-hcC"/>
+                            <constraint firstItem="u2o-Dn-5kO" firstAttribute="leading" secondItem="RVc-Z7-coM" secondAttribute="leading" id="cl6-9B-4be"/>
+                            <constraint firstItem="u2o-Dn-5kO" firstAttribute="bottom" secondItem="On1-ZG-2U2" secondAttribute="bottom" id="qVI-CU-jnQ"/>
+                            <constraint firstItem="u2o-Dn-5kO" firstAttribute="trailing" secondItem="RVc-Z7-coM" secondAttribute="trailing" id="zUJ-Lf-iK2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RVc-Z7-coM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Doodle Fun" id="q32-1q-szf"/>
+                    <connections>
+                        <outlet property="collectionView" destination="u2o-Dn-5kO" id="cx7-CD-IJa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r4u-U2-sEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153" y="161"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Tf-Rk-98g">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aB0-BC-fhN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AYL-Uo-zle">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QHd-af-WWX" kind="relationship" relationship="rootViewController" id="itu-PP-tWD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S8I-P7-6LB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351.19999999999999" y="160.56971514242881"/>
+        </scene>
+    </scenes>
+</document>
